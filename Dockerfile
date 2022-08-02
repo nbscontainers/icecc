@@ -11,7 +11,7 @@ RUN pacman -Syu --noconfirm && \
     tar -xf icecc-${ICECC_VERSION}.tar.gz && \
     rm -rf icecc-${ICECC_VERSION}.tar.gz && \
     cd icecc-${ICECC_VERSION} && \
-    ./configure --prefix=/usr/local && \
+    ./configure --prefix=/usr/local --without-man && \
     make && \
     make install DESTDIR=/icecc-install
 
